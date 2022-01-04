@@ -1,5 +1,5 @@
 
 <app-add-produit (produitToAdd)="ajouterproduit($event)"></app-add-produit>
 <h2>Liste des produits</h2>
-<app-produit (produitToDelete)="deleteproduit(produit)" (produitDetails)="detailsProduit(produit)" (produitToEdit)="modifierProduit(produit)" *ngFor="let produit of produits" [produit]="produit"></app-produit>
-<app-details-produit></app-details-produit>
+<app-produit (produitToDelete)="deleteproduit(produit)" (produitDetails)="setdetailsProduit(produit)" (produitToEdit)="modifierProduit(produit)" *ngFor="let produit of produits" [produit]="produit"></app-produit>
+<app-details-produit [produit]="getdetailsProduit()" *ngIf="getdetailsProduit()" ></app-details-produit>
