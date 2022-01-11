@@ -1,0 +1,35 @@
+<form (ngSubmit)="handleEdit(myForm)" #myForm="ngForm" ngform>
+    <div>
+        <label> Nom du produit :
+            <input type="text" name="nomEdit" id="nomEdit"  placeholder="nouveau nom du produit ..." required [(ngModel)]="produit.getNom" ngModel min="2" required #nomEdit='ngModel'  >
+        </label>
+        <span style="color:red" *ngIf='nomEdit.invalid && (nomEdit.dirty || nomEdit.touched)'>
+            <span *ngIf="nomEdit.errors?.['required']">Le nom est obliatoire</span>
+            <span *ngIf="nomEdit.errors?.['minlength']">2 lettre minimum</span>
+        </span> 
+    </div>
+    <div>
+        <label> Prix du produit :
+            <input type="number" name="prixEdit" id="prixEdit"  placeholder="nouveau prix du produit ..." [(ngModel)]="produit.getPrix" ngModel
+                required min="1" #prixEdit='ngModel'>
+        </label>
+        <span style="color:red" *ngIf='prixEdit.invalid && (prixEdit.dirty || prixEdit.touched)'>
+            <span *ngIf="prixEdit.errors?.['required']"> le prix est obligatoire</span>
+            <span *ngIf="prixEdit.errors?.['min']"> le prix doit etre superieur a 1 </span>
+        </span>
+    </div>
+    <div>
+        <label> Description du produit :
+            <textarea name="descriptionEdit" id="descriptionEdit" placeholder="nouvelle description ... " cols="20" rows="2" required
+                minlength="5" [(ngModel)]="produit.getDescription" ngModel #descriptionEdit='ngModel'></textarea>
+        </label>
+        <span style="color:red" *ngIf='descriptionEdit.invalid && (descriptionEdit.dirty || descriptionEdit.touched)'>
+            <span *ngIf="descriptionEdit.errors?.['required']"> la description est obligatoire</span>
+            <span *ngIf="descriptionEdit.errors?.['minlength']"> 5 lettres minimum</span>
+        </span>
+    </div>
+    <div>
+        <button type="submit" [disabled]="myForm.invalid">Modifier</button>
+    </div>
+
+</form>

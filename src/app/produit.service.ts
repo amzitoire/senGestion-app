@@ -21,7 +21,8 @@ export class ProduitService {
         }
        }
        
-    editProduit(a:Produit){}
+    editProduit(a:Produit){
+      }
     detailsProduit(a:Produit){return a}
 }
  

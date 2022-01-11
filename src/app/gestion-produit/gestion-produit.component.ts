@@ -12,42 +12,54 @@ export class GestionProduitComponent implements OnInit {
   //produits:Array<any>=[];
   produits:Array<Produit> = [];
   detailsProduit: any;
+  editProduit: any;
 
   constructor(private produitService:ProduitService) { }
   
   deleteproduit(produit: any) {
     //  this.produits = this.produits.filter( (elt) => (elt !== produit) );
      this.detailsProduit=null;
+     this.editProduit = null;
      this.produitService.deleteProduit(produit);
      
-    for (let index = 0; index < this.produits.length; index++) {
-      const element =this.produits[index];
-      element.setId = index+1;
-      
-    }
-
+    this.sortid();
     }
   ajouterproduit(produit: any) {
-      // this.produits.push(produit);
-      
-      let a = new Produit( 1 + this.produits.length,produit.nom,produit.prix,produit.description)
-      //a.setId = 1 + this.produits.length;
-      // a.setNom = produit.nom;
-      // a.setPrix = produit.prix;
-      // a.setDescription = produit.description;
+      let a = new Produit( 1 + this.produits.length,produit.nom,produit.prix,produit.description);
       this.produitService.addProduit(a);
-
-      // console.log(this.produitService.getAll())
-      // this.produits= this.produitService.getAll();
     }
+  modifierProduit(produit: any){ 
+    let a = new Produit(  this.produitService.detailsProduit(this.editProduit).getId,produit.nomEdit,produit.prixEdit,produit.descriptionEdit);
+    
+    this.produitService.addProduit(a);
+    this.produitService.deleteProduit(this.produitService.detailsProduit(this.editProduit));
+    this.detailsProduit=null;
+    this.editProduit = null;
+   
+    
+  }
 
-  modifierProduit(produit: any){}
+  setmodifierProduit(produit: any){
+    this.editProduit = this.produitService.detailsProduit(produit);
+  }
+  getmodifierProduit(){
+    return this.editProduit;
+  }
 
   setdetailsProduit(produit: any){
    this.detailsProduit = this.produitService.detailsProduit(produit);
     }
   getdetailsProduit(){
     return this.detailsProduit;
+    }
+    sortid(){
+
+      for (let index = 0; index < this.produits.length; index++) {
+        const element =this.produits[index];
+        element.setId = index+1;
+        
+      }
+
     }
 
   ngOnInit(): void {
