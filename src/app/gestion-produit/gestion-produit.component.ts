@@ -21,12 +21,15 @@ export class GestionProduitComponent implements OnInit {
      this.detailsProduit=null;
      this.editProduit = null;
      this.produitService.deleteProduit(produit);
+     this.produitService.deleteproduitsJson(produit.getId).subscribe();
      
     this.sortid();
     }
   ajouterproduit(produit: any) {
-      let a = new Produit( 1 + this.produits.length,produit.nom,produit.prix,produit.description);
+       let a = new Produit( 1 + this.produits.length,produit.nom,produit.prix,produit.description);
+      // this.produitService.addProduit(a);
       this.produitService.addProduit(a);
+      this.produitService.addProduitJson(a).subscribe();
     }
   modifierProduit(produit: any){ 
     let a = new Produit(  this.produitService.detailsProduit(this.editProduit).getId,produit.nomEdit,produit.prixEdit,produit.descriptionEdit);
@@ -62,7 +65,12 @@ export class GestionProduitComponent implements OnInit {
 
     }
 
+  // ngOnInit(): void {
+  //   this.produits= this.produitService.getAll();
+  // }
   ngOnInit(): void {
+    
     this.produits= this.produitService.getAll();
   }
+  
 }

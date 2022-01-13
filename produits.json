@@ -1,0 +1,46 @@
+{
+  "produits": [
+    {
+      "id": 1,
+      "nom": "coca",
+      "prix": 1234,
+      "descrption": "cowqaaaa"
+    },
+    {
+      "id": 2,
+      "nom": "Marwan Djibril",
+      "prix": 1500,
+      "description": "aaaaaaaaaa"
+    },
+    {
+      "id": 3,
+      "nom": "Marwan Djibril",
+      "prix": 1500,
+      "description": "aaaaaa"
+    },
+    {
+      "id": 4,
+      "nom": "amadou",
+      "prix": 1233333,
+      "description": "SEXYYYY"
+    },
+    {
+      "id": 5,
+      "nom": "amadou123",
+      "prix": 1500,
+      "description": "AAAAAA"
+    },
+    {
+      "id": 6,
+      "nom": "amadouGGGG",
+      "prix": 1500,
+      "description": "GGGGGG"
+    },
+    {
+      "id": 7,
+      "nom": "Marwan Djibril",
+      "prix": 1500,
+      "description": "aaaaa"
+    }
+  ]
+}
