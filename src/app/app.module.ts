@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { AddProduitComponent } from './add-produit/add-produit.component';
 import { FormsModule } from '@angular/forms';
 import { DetailsProduitComponent } from './details-produit/details-produit.component';
 import { EditProduitComponent } from './edit-produit/edit-produit.component';
+
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { EditProduitComponent } from './edit-produit/edit-produit.component';
     EditProduitComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule
