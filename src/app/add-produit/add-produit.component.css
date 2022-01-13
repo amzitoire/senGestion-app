@@ -3160,7 +3160,7 @@ pointer-events:none;
 color:#fff;
 border-color:#5e72e4;
 background-color:#5e72e4;
-box-shadow:04px6pxrgba(50,50,93,.11),01px3pxrgba(0,0,0,.08);
+box-shadow:04px 6px rgba(50,50,93,.11),01px 3px rgba(0,0,0,.08);
 }
 .btn-primary:hover
 {
@@ -18977,7 +18977,7 @@ color:#5e72e4;
 .main-content
 {
 position:relative;
-width:1000px
+
 ;
 }
 .main-content.navbar-top

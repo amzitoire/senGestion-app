@@ -1,19 +1,20 @@
 <div id="wrapper" >
     <div id="sidebar-wrapper">
-        <app-details-produit [produit]="getdetailsProduit()" *ngIf="getdetailsProduit()"></app-details-produit>
-       
+        <app-details-produit [produit]="getdetailsProduit()" *ngIf="getdetailsProduit()"></app-details-produit> 
     </div>
     <div id="page-content-wrapper">
         <div class="container-fluid">
             <div class="container-fluid">
+               
                 <app-edit-produit [produit]="getmodifierProduit()" *ngIf="getmodifierProduit() else modif" (produitToEdit)="modifierProduit($event)" (produitCancelEdit)="cancelModifierProduit($event)"></app-edit-produit>
                 <ng-template #modif>
                     <app-add-produit (produitToAdd)="ajouterproduit($event)" ></app-add-produit>
                 </ng-template>
-                
-                <h2>Liste des produits</h2>
+               
+                <div class=" row"><h2 class="mx-auto">Liste des produits</h2></div>
                 <div class="row">
-                    <app-produit (produitToDelete)="deleteproduit(produit)" (produitDetails)="setdetailsProduit(produit)" (produitToEdit)="setmodifierProduit(produit)" *ngFor="let produit of produits" [produit]="produit"></app-produit>
+                   
+                    <app-produit class="col-4" (produitToDelete)="deleteproduit(produit)" (produitDetails)="setdetailsProduit(produit)" (produitToEdit)="setmodifierProduit(produit)" *ngFor="let produit of produits" [produit]="produit"></app-produit>
                 </div>
             </div>
          

@@ -1176,7 +1176,7 @@ dl.row > dd + dt {
 .carousel-indicators {
     right: 50%;
     padding-right: 0;
-    margin-right: -50%;
+    margin-right: -30%;
 }
 
 .carousel-caption {
@@ -1221,23 +1221,18 @@ body {
 }
 
 #wrapper.toggled {
-  padding-right: 50%;
+  padding-right: 0 !important;
 }
 
 #sidebar-wrapper {
-  z-index: 1000;
-  position: absolute;
-  right: 50%;
-  width: 0;
-  height: 100%;
-  /* margin-right: -50%; */
-  margin-left: 20%;
-  margin-right: -20%;
-  /* padding: 20px; */
-  padding-top: 0;
-  padding-bottom: 0;
-  overflow-y: auto;
-  background: rgb(51, 50, 50 ,0.7);
+    z-index: 1000;
+    position: absolute;
+    TOP: 20%;
+    right: 5%;
+    width: 45%;
+    height: 69%;
+  overflow-y: auto hidden;
+  background:  transparent;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -1245,7 +1240,7 @@ body {
 }
 
 #wrapper.toggled #sidebar-wrapper {
-  width:50%;
+  width: 250px;
 }
 
 #page-content-wrapper {
@@ -1265,7 +1260,7 @@ body {
 .sidebar-nav {
   position: absolute;
   top: 0;
-  width: 50%;
+  width: 250px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1312,13 +1307,13 @@ body {
     padding-left: 0;
   }
   #wrapper.toggled {
-    padding-right: 50%;
+    padding-right: 250px;
   }
   #sidebar-wrapper {
     width: 0;
   }
   #wrapper.toggled #sidebar-wrapper {
-    width: 50%;
+    width: 250px;
   }
   #page-content-wrapper {
     padding: 20px;

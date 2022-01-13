@@ -1,4 +1,4 @@
-<form (ngSubmit)="handleEdit(myForm)" #myForm="ngForm" ngform>
+<!-- <form  #myForm="ngForm" ngform>
     <div>
         <label> Nom du produit :
             <input type="text" name="nomEdit" id="nomEdit"  placeholder="nouveau nom du produit ..." required [(ngModel)]="produit.getNom" ngModel min="2" required #nomEdit='ngModel'  >
@@ -21,7 +21,7 @@
     <div>
         <label> Description du produit :
             <textarea name="descriptionEdit" id="descriptionEdit" placeholder="nouvelle description ... " cols="20" rows="2" required
-                minlength="5" [(ngModel)]="produit.getDescription" ngModel #descriptionEdit='ngModel'></textarea>
+                minlength="5"  ngModel #descriptionEdit='ngModel'></textarea>
         </label>
         <span style="color:red" *ngIf='descriptionEdit.invalid && (descriptionEdit.dirty || descriptionEdit.touched)'>
             <span *ngIf="descriptionEdit.errors?.['required']"> la description est obligatoire</span>
@@ -30,7 +30,75 @@
     </div>
     <div>
         <button type="submit" [disabled]="myForm.invalid">Modifier</button>
-        <button id="annulerEdit" (click)="handleCancel()">Annuler</button>
+      
     </div>
 
-</form>
+</form> -->
+
+<html>
+<body>
+<div class="main-content" id="panel">
+  <div class="col-6 order-1">
+          <div class="card">
+            <div class="card-body">
+          <form (ngSubmit)="handleEdit(myForm)" #myForm="ngForm" ngform  >
+            <div class="col-12">
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-group">
+                    <label class="form-control-label" >Nom du produit :</label>
+                    <input type="text" class="form-control" name="nomEdit" placeholder="nom produit ..." [(ngModel)]="produit.getNom" ngModel required minlength="2" #nom='ngModel'>
+                    <span style="color:green; font-size: smaller;" *ngIf="nom.valid">*Nom Valide</span>  
+                    <span style="color:#212529 ; font-size: smaller;" *ngIf='nom.invalid && (nom.dirty || nom.touched)'>
+                        <span *ngIf="nom.errors?.['required']">*Le nom est obliatoire</span>
+                        <br>
+                        <span *ngIf="nom.errors?.['minlength']">*2 lettres minimum</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label class="form-control-label" >Prix du produit :</label>
+                    <input type="number" class="form-control" name="prixEdit" placeholder="Prix du produit ..." [(ngModel)]="produit.getPrix" ngModel required min="1" #prix='ngModel' >
+                    <span style="color:green; font-size: smaller;" *ngIf="prix.valid">*Prix Valide</span>
+                    <span style="color:#212529 ; font-size: smaller;" *ngIf='prix.invalid && (prix.dirty || prix.touched)'>
+                          <span *ngIf="prix.errors?.['required']">*le prix est obligatoire</span>
+                        <br>
+                          <span *ngIf="prix.errors?.['min']">*le prix doit etre superieur à 1</span>
+                      </span> 
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-group">
+                    <label class="form-control-label" >Description du produit:</label><br>
+                                <textarea  class="form-control" name="descriptionEdit" placeholder="Description" cols="20" rows="2" required minlength="5" [(ngModel)]="produit.getDescription" ngModel #description='ngModel'>Description</textarea>
+                                <span style="color:green; font-size: smaller;" *ngIf="description.valid">*Description Valide</span>
+                    <span style="color:#212529 ; font-size: smaller;" *ngIf='description.invalid && (description.dirty || description.touched)'>
+                        <span *ngIf="description.errors?.['required']">*la description est obligatoire</span>
+                        <br>
+                        <span *ngIf="description.errors?.['minlength']">*5 lettres minimum</span>
+                    </span> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="my-4" />
+            <div class="form-group">
+                <div>
+                    <button type="submit" id="ajouter" class="btn btn-dark " [disabled]="myForm.invalid">Modifier</button>
+                    <button id="annulerEdit" class="btn btn-dark " (click)="handleCancel()">Annuler</button>
+                </div>
+           
+              <br>
+              <span style="color: #212529 ; font-size: smaller;" *ngIf="myForm.invalid">*Le formulaire est invalide</span>
+              <span style="color:green; font-size: smaller;" *ngIf="myForm.valid">*Le formulaire est valide</span>
+            </div> 
+          </form>
+        </div>
+  </div>
+  </div>
+</div>
+</body>
+</html>

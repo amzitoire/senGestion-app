@@ -1,17 +1,10 @@
-<!-- <p ><strong>{{ describeproduit(produit) }}  </strong> <button (click)="handleDetails()">Détails</button><button (click)="handleEdit()">Modifier</button><button (click)="handleDelete()">Supprimer</button></p> -->
-
-
-        <div class="col-12 produit">
+        <div class=" produit">
             <div class="tile">
                 <div class="wrapper">
                     <div class="header"> <strong> Produit {{produit.id}}</strong></div>
-
-                    <!-- <div class="banner-img">
-                      
-                    </div> -->
-                    
+    
                     <div class="stats">
-                        <div>
+                        <div >
                             <strong>Nom :</strong> {{produit.nom}}
                         </div>
                         <div>
@@ -19,18 +12,12 @@
                         </div>
                     </div> 
 
-                    <div class="footer">
-                        <a   class="Cbtn Cbtn-primary" (click)="handleDetails()" onclick="toggle()" >Détails</a>
-                        <a   class="Cbtn Cbtn-primary"(click)="handleEdit()" >Modifier</a>
-                        <a  class="Cbtn Cbtn-danger" (click)="handleDelete()">Supprimer</a>
+                    <div class="row">
+                        <button   class="btn btn-outline-info col-12" (click)="handleDetails()" onclick="toggle()" >Détails</button>
+                        <button   class="btn btn-outline-primary col-12" (click)="handleEdit()" >Modifier</button>
+                        <button  class="btn btn-outline-warning col-12" (click)="handleDelete()">Supprimer</button>
                     </div>
                 </div>
             </div> 
         </div>
-        <!-- <script>
-         
-              function toggle(){
-                $("#wrapper").toggleClass("toggled");
-              }
-        
-        </script> -->
+      
