@@ -1,1 +1,36 @@
-<p ><strong>{{ describeproduit(produit) }}  </strong> <button (click)="handleDetails()">Détails</button><button (click)="handleEdit()">Modifier</button><button (click)="handleDelete()">Supprimer</button></p>
+<!-- <p ><strong>{{ describeproduit(produit) }}  </strong> <button (click)="handleDetails()">Détails</button><button (click)="handleEdit()">Modifier</button><button (click)="handleDelete()">Supprimer</button></p> -->
+
+
+        <div class="col-12 produit">
+            <div class="tile">
+                <div class="wrapper">
+                    <div class="header"> <strong> Produit {{produit.id}}</strong></div>
+
+                    <!-- <div class="banner-img">
+                      
+                    </div> -->
+                    
+                    <div class="stats">
+                        <div>
+                            <strong>Nom :</strong> {{produit.nom}}
+                        </div>
+                        <div>
+                            <strong>Prix :</strong> {{produit.prix}}
+                        </div>
+                    </div> 
+
+                    <div class="footer">
+                        <a   class="Cbtn Cbtn-primary" (click)="handleDetails()" onclick="toggle()" >Détails</a>
+                        <a   class="Cbtn Cbtn-primary"(click)="handleEdit()" >Modifier</a>
+                        <a  class="Cbtn Cbtn-danger" (click)="handleDelete()">Supprimer</a>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <!-- <script>
+         
+              function toggle(){
+                $("#wrapper").toggleClass("toggled");
+              }
+        
+        </script> -->

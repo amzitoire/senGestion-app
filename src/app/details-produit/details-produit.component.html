@@ -1,4 +1,32 @@
-<h2>infos du produit {{ produit.getId}}</h2>
-<p><strong>nom: </strong> {{ produit.getNom}} </p>
-<p><strong>prix:</strong> {{ produit.getPrix}} </p>
-<p><strong>description:</strong> {{ produit.getDescription}}</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-10 mx-auto my-2">
+            <div class="tile">
+                <div class="wrapper">
+                    <div class="header">Infos du produit {{ produit.getId}}</div>
+
+
+                   <div class="stats">
+
+                        <div>
+                            <strong> Nom :</strong>  {{ produit.getNom}}
+                        </div>
+
+                        <div>
+                            <strong>Prix :</strong> {{ produit.getPrix}}
+                        </div>
+
+                        <div>
+                            <strong>Description : </strong> {{ produit.getDescription}}
+                        </div>
+
+                    </div>
+
+                    <div class="footer">
+                        <a class="Cbtn Cbtn-primary" onclick="toggle()">Fermer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

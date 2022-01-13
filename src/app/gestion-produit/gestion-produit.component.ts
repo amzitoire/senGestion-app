@@ -38,6 +38,12 @@ export class GestionProduitComponent implements OnInit {
    
     
   }
+  cancelModifierProduit(produit: any){ 
+    this.detailsProduit=null;
+    this.editProduit = null;
+   
+    
+  }
 
   setmodifierProduit(produit: any){
     this.editProduit = this.produitService.detailsProduit(produit);
