@@ -14,7 +14,7 @@
                 <div class=" row"><h2 class="mx-auto">Liste des produits</h2></div>
                 <div class="row">
                    
-                    <app-produit class="col-4" (produitToDelete)="deleteproduit(produit)" (produitDetails)="setdetailsProduit(produit)" (produitToEdit)="setmodifierProduit(produit)" *ngFor="let produit of produits" [produit]="produit"></app-produit>
+                    <app-produit class="col-4" (produitToDelete)="deleteproduit(produit)" (produitDetails)="setdetailsProduit(produit)" (produitToEdit)="setmodifierProduit(produit)" *ngFor="let produit of produits , " [produit]="produit"></app-produit>
                 </div>
             </div>
          

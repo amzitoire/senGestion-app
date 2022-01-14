@@ -7,6 +7,10 @@
 
 
                    <div class="stats">
+                       
+                        <div>
+                            <strong> ID :</strong>  {{ produit.getId}}
+                        </div>
 
                         <div>
                             <strong> Nom :</strong>  {{ produit.getNom}}
@@ -22,8 +26,8 @@
 
                     </div>
 
-                    <div class="footer">
-                        <a class="Cbtn Cbtn-primary" onclick="toggle()">Fermer</a>
+                    <div class=" footer row mx-auto">
+                        <a  class="col-12 mx-auto btn btn-outline-info" onclick="closeDetails()">Fermer</a>
                     </div>
                 </div>
             </div>

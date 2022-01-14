@@ -1,5 +1,5 @@
 export class Produit {
-    constructor(private id:number,private nom:string,private prix:number,private description:string){}
+    constructor(private id:any,private nom:string,private prix:number,private description:string){}
     
     get getId():number{return this.id}
     set setId(id:number){this.id = id}

@@ -133,3 +133,42 @@ div.footer a.Cbtn-danger{
 div.footer a.Cbtn-danger:hover{
 	background-color: #fd7676;
 }
+
+.btn-outline-info
+{
+color:#11cdef;
+border-color:#11cdef;
+background-color:transparent;
+background-image:none;
+}
+.btn-outline-info:hover
+{
+color:#fff;
+border-color:#11cdef;
+background-color:#11cdef;
+}
+.btn-outline-info:focus,
+.btn-outline-info.focus
+{
+box-shadow:0000 rgba(17,205,239,.5);
+}
+.btn-outline-info.disabled,
+.btn-outline-info:disabled
+{
+color:#11cdef;
+background-color:transparent;
+}
+.btn-outline-info:not(:disabled):not(.disabled):active,
+.btn-outline-info:not(:disabled):not(.disabled).active,
+.show>.btn-outline-info.dropdown-toggle
+{
+color:#fff;
+border-color:#11cdef;
+background-color:#11cdef;
+}
+.btn-outline-info:not(:disabled):not(.disabled):active:focus,
+.btn-outline-info:not(:disabled):not(.disabled).active:focus,
+.show>.btn-outline-info.dropdown-toggle:focus
+{
+box-shadow:0000 rgba(17,205,239,.5);
+}

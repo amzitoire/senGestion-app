@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProduitService {
+ 
 url: string = 'http://localhost:3000/produits'
   Produits: Array<Produit> = []; 
   constructor(private http: HttpClient) {
@@ -16,7 +17,6 @@ url: string = 'http://localhost:3000/produits'
     getAll(){ return this.Produits; } 
     addProduit(a:Produit) { this.Produits.push(a); }
     deleteProduit(a:Produit) { 
-      // this.Produits.filter( (elt) => (elt !== a) );
      let index = this.Produits.indexOf(a);
         if (index > -1) {
           this.Produits.splice(index, 1);
@@ -25,9 +25,21 @@ url: string = 'http://localhost:3000/produits'
        
     detailsProduit(a:Produit){return a}
 
-    pushALL(produits: Array<Produit>) {
+    editProduit(a:Produit,b:Produit){ 
+      let index = this.Produits.indexOf(a);
+      if (index > -1) {
+        this.Produits[index]=b;
+      }
+     }
+
+    
+
+
+    
+
+    pushALL(produits: Array<any>) {
       produits.forEach(element => {
-        this.Produits.push(element);
+        this.Produits.push(new Produit(element.id,element.nom,element.prix,element.description));
       });
     }
     getAllJson(){
@@ -37,14 +49,14 @@ url: string = 'http://localhost:3000/produits'
     {
       return this.http.post<Produit>(this.url,a);
     }
-    deleteproduitsJson(id: number) {
+    deleteProduitsJson(id: number) {
      const url = `${this.url}/${id}`;
      return this.http.delete(url);
    }
  
    updateJson(produit:Produit,id:number) {
      const url = `${this.url}/${id}`;
-     return this.http.put(url,produit)
+     return this.http.put<Produit>(url,produit);
    }
 }
  

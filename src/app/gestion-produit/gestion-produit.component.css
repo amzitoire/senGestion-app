@@ -1229,8 +1229,8 @@ body {
     position: absolute;
     TOP: 20%;
     right: 5%;
-    width: 45%;
-    height: 69%;
+    width: 0;
+    height: 100%;
   overflow-y: auto hidden;
   background:  transparent;
   -webkit-transition: all 0.5s ease;
@@ -1240,7 +1240,7 @@ body {
 }
 
 #wrapper.toggled #sidebar-wrapper {
-  width: 250px;
+  width: 45%;
 }
 
 #page-content-wrapper {
@@ -1260,7 +1260,7 @@ body {
 .sidebar-nav {
   position: absolute;
   top: 0;
-  width: 250px;
+  width: 45%;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1313,7 +1313,7 @@ body {
     width: 0;
   }
   #wrapper.toggled #sidebar-wrapper {
-    width: 250px;
+    width: 45%;
   }
   #page-content-wrapper {
     padding: 20px;

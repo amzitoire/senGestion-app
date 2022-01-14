@@ -1,46 +1,40 @@
 {
   "produits": [
     {
-      "id": 1,
-      "nom": "coca",
-      "prix": 1234,
-      "descrption": "cowqaaaa"
-    },
-    {
       "id": 2,
-      "nom": "Marwan Djibril",
-      "prix": 1500,
-      "description": "aaaaaaaaaa"
+      "nom": "alalal",
+      "prix": 3,
+      "description": "55555"
     },
     {
       "id": 3,
-      "nom": "Marwan Djibril",
-      "prix": 1500,
+      "nom": "client",
+      "prix": 3,
       "description": "aaaaaa"
     },
     {
       "id": 4,
-      "nom": "amadou",
-      "prix": 1233333,
-      "description": "SEXYYYY"
+      "nom": "client",
+      "prix": 6,
+      "description": "qsdsss"
     },
     {
       "id": 5,
-      "nom": "amadou123",
-      "prix": 1500,
-      "description": "AAAAAA"
-    },
-    {
-      "id": 6,
-      "nom": "amadouGGGG",
-      "prix": 1500,
-      "description": "GGGGGG"
+      "nom": "Sall",
+      "prix": 2,
+      "description": "zzzzz"
     },
     {
       "id": 7,
-      "nom": "Marwan Djibril",
-      "prix": 1500,
-      "description": "aaaaa"
+      "nom": "client7777",
+      "prix": 7777,
+      "description": "777777"
+    },
+    {
+      "id": 8,
+      "nom": "client8888",
+      "prix": 88888,
+      "description": "99999"
     }
   ]
 }

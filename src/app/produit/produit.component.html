@@ -1,7 +1,7 @@
         <div class=" produit">
             <div class="tile">
                 <div class="wrapper">
-                    <div class="header"> <strong> Produit {{produit.id}}</strong></div>
+                    <div class="header"> <strong> Produit </strong></div>
     
                     <div class="stats">
                         <div >
@@ -13,8 +13,8 @@
                     </div> 
 
                     <div class="row">
-                        <button   class="btn btn-outline-info col-12" (click)="handleDetails()" onclick="toggle()" >Détails</button>
-                        <button   class="btn btn-outline-primary col-12" (click)="handleEdit()" >Modifier</button>
+                        <button  class="btn btn-outline-info col-12" id="detailsBtn"(click)="handleDetails()" onclick="openDetails(),goToTop()" >Détails</button>
+                        <button  class="btn btn-outline-primary col-12" (click)="handleEdit()" onclick="goToTop()">Modifier</button>
                         <button  class="btn btn-outline-warning col-12" (click)="handleDelete()">Supprimer</button>
                     </div>
                 </div>

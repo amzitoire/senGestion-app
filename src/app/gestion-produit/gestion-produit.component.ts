@@ -17,25 +17,34 @@ export class GestionProduitComponent implements OnInit {
   constructor(private produitService:ProduitService) { }
   
   deleteproduit(produit: any) {
-    //  this.produits = this.produits.filter( (elt) => (elt !== produit) );
-     this.detailsProduit=null;
+    this.detailsProduit=null;
      this.editProduit = null;
-     this.produitService.deleteProduit(produit);
-     this.produitService.deleteproduitsJson(produit.getId).subscribe();
-     
-    this.sortid();
+     if (confirm("Voulez vous vraiment supprimer  le produit ? ") == true) {
+      this.produitService.deleteProduit(produit);
+      this.produitService.deleteProduitsJson(produit.id).subscribe();
+    } 
     }
   ajouterproduit(produit: any) {
-       let a = new Produit( 1 + this.produits.length,produit.nom,produit.prix,produit.description);
-      // this.produitService.addProduit(a);
+    var id =1;
+    for (let index = 0; index < this.produits.length; index++) {
+      const element =this.produits[index];
+      if (element.getId >id){
+        id=element.getId+1
+      }
+    };
+
+       let a = new Produit( id,produit.nom,produit.prix,produit.description);
+      
       this.produitService.addProduit(a);
       this.produitService.addProduitJson(a).subscribe();
     }
   modifierProduit(produit: any){ 
     let a = new Produit(  this.produitService.detailsProduit(this.editProduit).getId,produit.nomEdit,produit.prixEdit,produit.descriptionEdit);
-    
-    this.produitService.addProduit(a);
-    this.produitService.deleteProduit(this.produitService.detailsProduit(this.editProduit));
+   
+    // this.produitService.addProduit(a);
+    // this.produitService.deleteProduit(this.produitService.detailsProduit(this.editProduit));
+    this.produitService.editProduit(this.produitService.detailsProduit(this.editProduit),a);
+    this.produitService.updateJson(a,a.getId).subscribe();
     this.detailsProduit=null;
     this.editProduit = null;
    
@@ -44,10 +53,8 @@ export class GestionProduitComponent implements OnInit {
   cancelModifierProduit(produit: any){ 
     this.detailsProduit=null;
     this.editProduit = null;
-   
     
   }
-
   setmodifierProduit(produit: any){
     this.editProduit = this.produitService.detailsProduit(produit);
   }
@@ -61,19 +68,18 @@ export class GestionProduitComponent implements OnInit {
   getdetailsProduit(){
     return this.detailsProduit;
     }
-    sortid(){
 
-      for (let index = 0; index < this.produits.length; index++) {
-        const element =this.produits[index];
-        element.setId = index+1;
-        
-      }
 
-    }
+    // sortid(){
 
-  // ngOnInit(): void {
-  //   this.produits= this.produitService.getAll();
-  // }
+    //   for (let index = 0; index < this.produits.length; index++) {
+    //     let element:Produit=this.produits[index];
+    //      const idTE=element.getId;
+    //     element.setId=index+1;
+    //     this.produitService.updateJson(element,idTE).subscribe();
+    //   }
+    // }
+
   ngOnInit(): void {
     
     this.produits= this.produitService.getAll();

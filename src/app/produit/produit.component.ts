@@ -7,11 +7,13 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ProduitComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
   @Input() produit:any;
   @Output() produitToDelete:EventEmitter<any> = new EventEmitter();
   @Output() produitToEdit:EventEmitter<any> = new EventEmitter();
   @Output() produitDetails:EventEmitter<any> = new EventEmitter();
+
+ ;
 
 handleDelete(){ this.produitToDelete.emit(); }
 handleEdit(){ this.produitToEdit.emit(); }

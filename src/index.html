@@ -25,6 +25,19 @@
   <script>
      function toggle(){
         $("#wrapper").toggleClass("toggled");
+        $("#sidebar-wrapper").show();
+      }
+      function closeDetails(){
+        $("#wrapper").removeClass("toggled");
+        $("#sidebar-wrapper").hide();
+      }
+      function openDetails(){
+        $("#sidebar-wrapper").show();
+        $("#wrapper").addClass("toggled");
+       
+      }
+      function goToTop(){
+        $('html,body').animate({scrollTop: $("#wrapper").offset().top}, 'slow'      );
       }
 
   </script>
