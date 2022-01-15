@@ -3,13 +3,13 @@
     {
       "id": 2,
       "nom": "ORDINATEUR",
-      "prix": 3000,
+      "prix": 30055,
       "description": "ORDINATEUR"
     },
     {
       "id": 4,
       "nom": "client",
-      "prix": 6,
+      "prix": 1200,
       "description": "qsdsss"
     }
   ]

@@ -10,6 +10,7 @@ import { AddProduitComponent } from './add-produit/add-produit.component';
 import { FormsModule } from '@angular/forms';
 import { DetailsProduitComponent } from './details-produit/details-produit.component';
 import { EditProduitComponent } from './edit-produit/edit-produit.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { EditProduitComponent } from './edit-produit/edit-produit.component';
     ProduitComponent,
     AddProduitComponent,
     DetailsProduitComponent,
-    EditProduitComponent
+    EditProduitComponent,
+    FooterComponent
   ],
   imports: [
     HttpClientModule,
