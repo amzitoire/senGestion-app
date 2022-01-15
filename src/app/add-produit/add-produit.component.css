@@ -18974,12 +18974,12 @@ transform:rotate(180deg);
 color:#5e72e4;
 }
 
-.main-content
+/* .main-content
 {
 position:relative;
 
 ;
-}
+} */
 .main-content.navbar-top
 {
 padding-right:0!important;

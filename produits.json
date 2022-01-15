@@ -2,39 +2,15 @@
   "produits": [
     {
       "id": 2,
-      "nom": "alalal",
-      "prix": 3,
-      "description": "55555"
-    },
-    {
-      "id": 3,
-      "nom": "client",
-      "prix": 3,
-      "description": "aaaaaa"
+      "nom": "ORDINATEUR",
+      "prix": 3000,
+      "description": "ORDINATEUR"
     },
     {
       "id": 4,
       "nom": "client",
       "prix": 6,
       "description": "qsdsss"
-    },
-    {
-      "id": 5,
-      "nom": "Sall",
-      "prix": 2,
-      "description": "zzzzz"
-    },
-    {
-      "id": 7,
-      "nom": "client7777",
-      "prix": 7777,
-      "description": "777777"
-    },
-    {
-      "id": 8,
-      "nom": "client8888",
-      "prix": 88888,
-      "description": "99999"
     }
   ]
 }

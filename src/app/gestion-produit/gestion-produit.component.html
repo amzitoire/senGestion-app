@@ -11,10 +11,14 @@
                     <app-add-produit (produitToAdd)="ajouterproduit($event)" ></app-add-produit>
                 </ng-template>
                
-                <div class=" row"><h2 class="mx-auto">Liste des produits</h2></div>
+                <div class=" row"><h2 class="mx-auto">Liste des produits</h2>
+                    <form action="" class="form-inline col-12 " (ngSubmit)="handleSearch(myForm)" #myForm="ngForm" ngform >
+                        <input type="search" name="search" class="form-control col-9" placeholder="Rechercher un produit par son nom..." ngModel required minlength="2" #nom='ngModel'>
+                        <button class="btn btn-outline-info " type="submit">Rechercher</button>
+                    </form>
+                </div>
                 <div class="row">
-                   
-                    <app-produit class="col-4" (produitToDelete)="deleteproduit(produit)" (produitDetails)="setdetailsProduit(produit)" (produitToEdit)="setmodifierProduit(produit)" *ngFor="let produit of produits , " [produit]="produit"></app-produit>
+                    <app-produit class="col-xs-12 col-md-6 col-lg-4 col-xl-3" (produitToDelete)="deleteproduit(produit)" (produitDetails)="setdetailsProduit(produit)" (produitToEdit)="setmodifierProduit(produit)" *ngFor="let produit of produits , " [produit]="produit"></app-produit>
                 </div>
             </div>
          

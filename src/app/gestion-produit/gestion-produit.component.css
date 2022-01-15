@@ -1214,10 +1214,10 @@ body {
 
 #wrapper {
   padding-left: 0;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 2.5s ease;
+  -moz-transition: all 2.5s ease;
+  -o-transition: all 2.5s ease;
+  transition: all 2.5s ease;
 }
 
 #wrapper.toggled {
@@ -1233,10 +1233,10 @@ body {
     height: 100%;
   overflow-y: auto hidden;
   background:  transparent;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 1.5s ease;
+  -moz-transition: all 2.5s ease;
+  -o-transition: all 2.5s ease;
+  transition: all 2.5s ease;
 }
 
 #wrapper.toggled #sidebar-wrapper {
