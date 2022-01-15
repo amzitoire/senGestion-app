@@ -23,7 +23,7 @@ url: string = 'http://localhost:3000/produits'
         }
        }
        
-    detailsProduit(a:Produit){return a}
+    getProduit(a:Produit){return a}
 
     editProduit(a:Produit,b:Produit){ 
       let index = this.Produits.indexOf(a);
@@ -31,12 +31,6 @@ url: string = 'http://localhost:3000/produits'
         this.Produits[index]=b;
       }
      }
-
-    
-
-
-    
-
     pushALL(produits: Array<any>) {
       produits.forEach(element => {
         this.Produits.push(new Produit(element.id,element.nom,element.prix,element.description));
@@ -57,6 +51,26 @@ url: string = 'http://localhost:3000/produits'
    updateJson(produit:Produit,id:number) {
      const url = `${this.url}/${id}`;
      return this.http.put<Produit>(url,produit);
+   }
+   search(string:any,){
+     let search:Array<Produit>=[];
+     for (var i = 0; i < this.Produits.length; i++){
+      // look for the entry with a matching `code` value
+      if (this.Produits[i].getNom == string){
+        search.push(this.Produits[i])
+      }
+    }
+    
+    if(search.length){ 
+      alert( search.length+" produit(s) trouvé(s)...");
+      return search;
+    }else{
+      alert("Aucun produit trouvé...");
+      alert("Tous les produits sont affichés...")
+      return this.Produits;
+     
+    }
+  
    }
 }
  

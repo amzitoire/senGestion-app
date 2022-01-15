@@ -1,13 +1,13 @@
 {
   "produits": [
     {
-      "id": 2,
-      "nom": "alalal",
-      "prix": 3,
-      "description": "55555"
+      "id": 1,
+      "nom": "client1",
+      "prix": 1000,
+      "description": "aaaaab"
     },
     {
-      "id": 3,
+      "id": 2,
       "nom": "client",
       "prix": 3,
       "description": "aaaaaa"
