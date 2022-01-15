@@ -36,7 +36,7 @@
                 <div class="col-12">
                   <div class="form-group">
                     <label class="form-control-label" >Description du produit:</label><br>
-                                <textarea  class="form-control" name="description" id="" placeholder="Description" cols="20" rows="2" required minlength="5" ngModel #description='ngModel'>Description</textarea>
+                                <textarea  class="form-control" name="description" id="" placeholder="Description" cols="20" rows="2" required minlength="5" maxlength="100" ngModel #description='ngModel'>Description</textarea>
                                 <span style="color:green; font-size: smaller;" *ngIf="description.valid">*Description Valide</span>
                     <span style="color:#212529 ; font-size: smaller;" *ngIf='description.invalid && (description.dirty || description.touched)'>
                         <span *ngIf="description.errors?.['required']">*la description est obligatoire</span>
