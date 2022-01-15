@@ -29,12 +29,6 @@
       "nom": "client7777",
       "prix": 7777,
       "description": "777777"
-    },
-    {
-      "id": 8,
-      "nom": "client8888",
-      "prix": 88888,
-      "description": "99999"
     }
   ]
 }
